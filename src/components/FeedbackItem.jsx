@@ -50,7 +50,7 @@ const {deleteFeedback, editFeedback} = useContext(FeedbackContext)
 
 
 FeedbackItem.propTypes = {
-  items: PropTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
 }
 
 export default FeedbackItem
