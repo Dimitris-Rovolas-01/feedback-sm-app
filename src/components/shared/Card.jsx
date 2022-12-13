@@ -1,5 +1,5 @@
 import React from 'react'
-import FeedbackItem from '../FeedbackItem'
+// import FeedbackItem from '../FeedbackItem'
 import PropTypes from 'prop-types'
 
 // Props children brings all the children of the component
