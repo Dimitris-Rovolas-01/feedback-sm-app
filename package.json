@@ -2,7 +2,7 @@
   "name": "feedback-sm-app",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://salty-agate-street.glitch.me",
+  "proxy":"https://salty-agate-street.glitch.me:5000",
   
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
