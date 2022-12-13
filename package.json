@@ -2,7 +2,7 @@
   "name": "feedback-sm-app",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://sparkling-bienenstitch-f01950.netlify.app:5000",
+  "proxy":"https://salty-agate-street.glitch.me",
   
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
