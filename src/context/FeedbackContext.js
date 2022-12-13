@@ -19,7 +19,7 @@ export const FeedbackProvider = ({children}) => {
     //Fetch Feedback with JSON Server
     const fetchFeedback = async () => {
         /* Set Proxy to packge.json and removed http://localhost:5000 */        
-        const response = await fetch(`/feedback?_sort=id&_order=desc`)
+        const response = await fetch(`https://salty-agate-street.glitch.me/feedback?_sort=id&_order=desc`)
         const data = await response.json()
         // console.log(data)
         setFeedback(data)
@@ -68,7 +68,7 @@ export const FeedbackProvider = ({children}) => {
 
         //add feedback item  
         const addFeedback = async (newFeedback) => {
-            const response = await fetch('feedback', {
+            const response = await fetch('https://salty-agate-street.glitch.me/feedback', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -84,7 +84,7 @@ export const FeedbackProvider = ({children}) => {
         const deleteFeedback = async (id) => {
         
         if (window.confirm('Are you sure you want to delete ?')){
-            await fetch(`/feedback/${id}`,{method:'DELETE'}) 
+            await fetch(`https://salty-agate-street.glitch.me/feedback/${id}`,{method:'DELETE'}) 
             //used filter to loop through the data on FeedBackData 
           setFeedback(feedback.filter((item)=> item.id !== id))
           }  
@@ -93,7 +93,7 @@ export const FeedbackProvider = ({children}) => {
 
         //update feedback item
         const updateFeedback = async (id, updItem) => {
-        const response = await fetch (`/feedback/${id}`, {
+        const response = await fetch (`https://salty-agate-street.glitch.me/feedback/${id}`, {
                 method:'PUT',
                 headers: {
                     'Content-Type': 'application/json'

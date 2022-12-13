@@ -2,7 +2,6 @@
   "name": "feedback-sm-app",
   "version": "0.1.0",
   "private": true,
-  "proxy":"https://salty-agate-street.glitch.me:5000",
   
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -10,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "concurrently": "^7.6.0",
     "framer-motion": "^7.7.2",
-    "json-server": "^0.17.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -23,8 +21,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000",
-    "dev": "concurrently \"npm run server\" \"npm start\"" 
+   
+    "dev": "concurrently \"npm run server\" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
