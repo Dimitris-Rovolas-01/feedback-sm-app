@@ -9,7 +9,7 @@ import Spinner from './shared/Spinner'
 function FeedbackList() {
     const {feedback, isLoading} = useContext(FeedbackContext)
     // console.log(feedback);
-    if (!isLoading && (!feedback || feedback.lenghth ===0)){
+    if (isLoading && (!feedback || feedback.lenghth ===0)) {
         return <p>No Feedback yet</p>
     }
 

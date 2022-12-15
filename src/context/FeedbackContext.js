@@ -5,19 +5,47 @@ const FeedbackContext = createContext()
 
 // this is a wrapper so we are exporting all of it's children
 export const FeedbackProvider = ({children}) => {
+    /*
+    const [feedback,setFeedback] = useState([
+        {
+            "text": "This is feedback item 1 coming from Context API",
+            "rating": 10,
+            "id": 1
+            },
+            {
+            "text": "This is feedback item 2 coming from Context API",
+            "rating": 8,
+            "id": 2
+            },
+            {
+            "text": "This is feedback item 3 coming from Context API",
+            "rating": 6,
+            "id": 3
+            },
+            {
+            "text": "This is feedback item 4 coming from Context API",
+            "rating": 7,
+            "id": 4
+            }
+    ])
+    */
+
+    // keep empty to fetch data from json-server
     const [feedback,setFeedback] = useState([])
-    const [isLoading,setIsLoading] = useState([true])
+    const [isLoading,setIsLoading] = useState(true)
     const [feedbackEdit, setFeedbackEdit] = useState({
         item:{},
         edit: false
     })
 
-    useEffect(()=>{
+   
+    //Fetch Feedback with JSON Server
+
+    useEffect(()=>{        
        fetchFeedback()    
     },[])
 
-    //Fetch Feedback with JSON Server
-    const fetchFeedback = async () => {
+     const fetchFeedback = async () => {
         /* Set Proxy to packge.json and removed http://localhost:5000 */        
         const response = await fetch(`https://salty-agate-street.glitch.me/feedback?_sort=id&_order=desc`)
         const data = await response.json()
@@ -25,22 +53,21 @@ export const FeedbackProvider = ({children}) => {
         setFeedback(data)
         setIsLoading(false)
     }
-
+    
     
 
-/****  UI requests  ****/
+    /****  UI requests  ****/
     // Add feedback
-    /*   
+    /*
         const addFeedback = (newFeedback) => {  
         newFeedback.id = uuidv4()
         console.log(newFeedback);
-        use Spread operator to update the state value with the newFeedback
+        // use Spread operator to update the state value with the newFeedback
         setFeedback([newFeedback,...feedback])
         }
     */
-
     // Delete Feedback
-    /* 
+      /*
         const deleteFeedback = (id) => {
         // console.log('App',id)
         if (window.confirm('Are you sure you want to delete ?')){  
@@ -49,10 +76,9 @@ export const FeedbackProvider = ({children}) => {
           }  
         } 
     
-    */
 
-     // Update Feedback
-     /*
+
+     // Update Feedback     
      
         const updateFeedback = (id, updItem) => {
             // console.log(id,updItem);
@@ -61,11 +87,11 @@ export const FeedbackProvider = ({children}) => {
                 feedback.map( (item)=> item.id === id ? {...item,...updItem} : item)
                 )
         }
-     */     
+       */
 
 
         /* JSON Server requests */
-
+ 
         //add feedback item  
         const addFeedback = async (newFeedback) => {
             const response = await fetch('https://salty-agate-street.glitch.me/feedback', {
@@ -108,7 +134,7 @@ export const FeedbackProvider = ({children}) => {
                 feedback.map( (item)=> item.id === id ? {...item,...data} : item)
                 )
             }
-
+    
         // Set item to be updated
         const editFeedback = (item) => {
             setFeedbackEdit({
@@ -121,7 +147,7 @@ export const FeedbackProvider = ({children}) => {
     return <FeedbackContext.Provider
     value={{
         feedback, deleteFeedback, addFeedback, editFeedback, feedbackEdit,
-        updateFeedback,
+        updateFeedback,isLoading
     }}
     >
         {children}
