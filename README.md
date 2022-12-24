@@ -40,9 +40,9 @@ In the project directory, you can run:
 
 ### npm i react-icons 
 
-For this project we use react-icons/fa to import from react/icons as the next example:
+For this project we use react-icons/fa to import font-awsome icon set from react/icons as the next example:
 
-import {FaTimes, FaEdit} from 'react-icons/fa'
+### import {FaTimes, FaEdit} from 'react-icons/fa'
 
 
 Enjoy DR
