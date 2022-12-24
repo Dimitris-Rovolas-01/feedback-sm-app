@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# An one page small Feeedback Up with real life db manipulation from the json-server react component hosted at Glitch
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Needed Scripts
+
+## Context API
+
+To avoid tedious prop drilling to handle state as a single source of truth we use Context API
+**There is commentation making available to play with prop drilling although Context makes our life way easier.
 
 In the project directory, you can run:
 
-### `npm start`
+#### npm i react-context-api
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Make a provider wrapper for the FeedbackProvider wrapper using:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### import { createContext } from 'react'
 
-### `npm test`
+and use it to either fetch state based db from Context or use async function to fetch data from the JSON Serve API set up at https://salty-agate-street.glitch.me/feedback 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*There is adequite commentation to clone this project and experiment with it as you will.
 
-### `npm run build`
+## Framer Motion
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Spice up this simple feedback by adding some component animations for flavor using Framer Motion as components load
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In the project directory, you can run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### npm i framer-motion
 
-### `npm run eject`
+### import {motion, AnimatePresence } from 'framer-motion' to animate the mapping of Feedbackitem components within a FeedbackList component
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## React Icons
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Further implement UI elements with the React Icon package
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+In the project directory, you can run:
 
-## Learn More
+### npm i react-icons 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For this project we use react-icons/fa to import from react/icons as the next example:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+import {FaTimes, FaEdit} from 'react-icons/fa'
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Enjoy DR
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
