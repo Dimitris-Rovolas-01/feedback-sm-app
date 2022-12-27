@@ -52,7 +52,7 @@ Spice up this simple feedback by adding some component animations for flavor usi
 
 In the project directory, you can run:
 
-### npm i framer-motion
+#### npm i framer-motion
 
 #### import {motion, AnimatePresence } from 'framer-motion' to animate the mapping of Feedbackitem components within a FeedbackList component
 
