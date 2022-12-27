@@ -54,7 +54,8 @@ In the project directory, you can run:
 
 #### npm i framer-motion
 
-#### import {motion, AnimatePresence } from 'framer-motion' to animate the mapping of Feedbackitem components within a FeedbackList component
+#### import {motion, AnimatePresence } from 'framer-motion' 
+to animate the mapping of Feedbackitem components within a FeedbackList component
 
 
 ## React Icons
