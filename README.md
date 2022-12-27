@@ -1,4 +1,4 @@
-# A small Feeedback Up with real life db manipulation from the json-server react component hosted at Glitch
+# A small Feeedback Up with real life db manipulation from the json-server react package that is currently hosted at Glitch
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
